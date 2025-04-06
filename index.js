@@ -55,7 +55,7 @@ async function run() {
 
     // middlewares 
     const verifyToken = (req, res, next) => {
-      // console.log('inside verify token', req.headers.authorization);
+      // // console.log('inside verify token', req.headers.authorization);
       if (!req.headers.authorization) {
         return res.status(401).send({ message: 'unauthorized access' });
       }
@@ -174,7 +174,7 @@ async function run() {
     // review collection in delete operation
     app.get('/review/:email', verifyToken, async (req, res) => {
       const email = req.params.email;
-      console.log(email)
+      // console.log(email)
       const query = { userEmail: email };
       const result = await reviewsCollection.find(query).toArray();
       res.send(result)
@@ -344,7 +344,7 @@ async function run() {
     app.post('/request/admin/:id', async (req, res) => {
       const id = req.params.id;
       const data = req.body;
-      console.log(data)
+      // console.log(data)
       await mealsCollection.insertOne(data);
       const query = { _id: new ObjectId(id) };
       const result = await upcomingMealsCollection.deleteOne(query);
@@ -437,5 +437,5 @@ app.get('/', (req, res) => {
 })
 
 app.listen(port, () => {
-  console.log(`Bistro boss is sitting on port ${port}`);
+  // console.log(`Bistro boss is sitting on port ${port}`);
 })
