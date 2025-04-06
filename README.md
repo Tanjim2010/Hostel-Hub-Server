@@ -1,43 +1,29 @@
-# Hostel Hub - Client Side
+# Hostel Hub - Server Side
 
-🌐 **Live Website:** [https://assignment-12-499f2.web.app/upcomingMeals](https://assignment-12-499f2.web.app/upcomingMeals)
-
----
-
-## 🧩 Features:
-1. Responsive home page with meal categories using tab system.
-2. Dynamic meal details page with like, review, and request features.
-3. Stripe payment integration for package checkout and premium access.
-4. Join Us page for login/register with social authentication.
-5. User dashboard: profile, reviews, requested meals, and payment history.
-6. Admin dashboard: manage users, meals, reviews, requests, and upcoming meals.
-7. Infinite scrolling and server-side filters on meals page.
-8. Toast notifications and sweet alerts for all CRUD actions.
-9. Persistent login using Firebase and local storage.
-10. Secured environment variables for Firebase and backend API.
+🖥️ **Live Server:** [https://hostel-hub-server-six.vercel.app](https://hostel-hub-server-six.vercel.app)
 
 ---
 
-## 📦 Tech Stack:
-- React.js (Vite)
-- React Router DOM
-- Tailwind CSS + DaisyUI
-- Firebase Authentication
-- React Hook Form
-- Framer Motion
-- TanStack React Query
-- Stripe (React Stripe JS)
-- SweetAlert2 / React Toastify
-- Infinite Scroll Component
+## 🛠️ Features:
+
+1. User Authentication using **JWT** (JSON Web Tokens).
+2. **Role-based access control** for Admins and Users.
+3. RESTful APIs using **Express.js**.
+4. **MongoDB** database connection with environment-based credentials.
+5. **Stripe Payment Integration** for premium package purchases.
+6. Secure meal request and review handling.
+7. Middleware for **JWT verification** and **Admin-only route protection**.
+8. Server-side filtering, searching, sorting, and pagination.
+9. Support for upcoming meals & publish-on-like logic.
+10. Environment variables (.env) used for hiding sensitive credentials.
 
 ---
 
 ## 📁 Environment Variables (.env)
+
 ```env
-VITE_API_BASE_URL=https://hostel-hub-server-six.vercel.app
-VITE_FIREBASE_API_KEY=your_firebase_api_key
-VITE_FIREBASE_AUTH_DOMAIN=your_project.firebaseapp.com
-VITE_FIREBASE_PROJECT_ID=your_project_id
-VITE_FIREBASE_STORAGE_BUCKET=your_project.appspot.com
-VITE_FIREBASE_MESSAGING_SENDER_ID=your_messaging_sender_id
-VITE_FIREBASE_APP_ID=your_app_id
+PORT=5000
+DB_USER=your_mongodb_username
+DB_PASS=your_mongodb_password
+ACCESS_TOKEN_SECRET=your_jwt_secret
+STRIPE_SECRET_KEY=your_stripe_secret_key
