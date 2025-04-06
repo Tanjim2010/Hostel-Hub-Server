@@ -11,7 +11,7 @@
 ---
 
 ## 🛠️ Features:
-1. User authentication with JWT and role-based access control.
+1. User authentication with JWT and role-based access contr
 2. MongoDB database with secure access using environment variables.
 3. Admin routes for user management, meal management, and reviews.
 4. Upcoming meals system with publish on like threshold.
